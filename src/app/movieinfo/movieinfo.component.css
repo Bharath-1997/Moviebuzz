@@ -1,0 +1,65 @@
+/* .example-card {
+    max-width: 30%;
+  }
+  .example-card1 {
+    width: 500px;
+    height: 500px;
+  }   */
+
+  /* .example-card {
+    width: 30%;
+    float: left;
+  }
+  .example-card1 {
+    width: 30%;
+    float: left;
+  }  
+  .example-header-image {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdveeR6eieylg70Zs1akLz84U46kCm62Zmcu3WkbTSAEbOeVLH&s');
+    background-size: cover;
+  } */
+
+
+  /* #mySlider{
+    display: block;
+} */
+
+/* @media (max-width: 640px) 
+{
+    #mySlider
+    {
+        display: none;
+    }
+    #example
+    {
+       width: 100%;
+       height: 100%;
+    }
+} */
+img{
+  width: 320px;
+  height: 300px;
+} 
+ @media (max-width: 640px) 
+{
+    img{
+      width: 200px;
+      height: 250px;
+    }
+    .example
+    {
+      display: none;
+    }
+   
+}
+.example{
+  height: 550px;
+}
+iframe{
+  height: 500px;
+}
+/* mat-card img{
+  object-fit: cover; 
+  width: 70%; 
+  height: 40%;
+} */

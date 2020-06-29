@@ -1,0 +1,25 @@
+ /* #mySlider{
+    height: 100%;
+    width: 100%;
+}
+
+@media (max-width: 640px) 
+{
+    #mySlider
+    {
+        height: 200px;
+        width: 400px;
+    }
+}  */
+
+/* iframe
+{
+    resize: both;
+  overflow: auto;
+} */
+
+.mat-dialog-container{
+    max-width: 100%;
+    max-height: 100% !important;
+    resize: both;
+  }

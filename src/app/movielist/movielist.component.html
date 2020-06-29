@@ -1,0 +1,69 @@
+<!-- <mat-grid-list cols="4" rowHeight="2:1" *ngFor="let movie of movies">
+    <mat-grid-tile>{{movie.name}}</mat-grid-tile>
+  </mat-grid-list> -->
+
+<!-- <div class="col-md-3" *ngFor="let movie of movies">
+    <label> {{movie.img}} </label>
+</div> -->
+
+<!-- <div class="col-md-3" *ngFor="let image of movies">
+    <img src="{{image.img}}" />
+    <label> {{image.name}} </label>
+</div> -->
+
+
+<!-- <mat-grid-list cols="4" rowHeight="4:1" *ngFor="let movie of movies">
+        <mat-grid-tile class="green">
+            <img class="tile-image" src="{{movie.img}}" layout-fill>
+                <mat-grid-tile-footer>
+                <h3>first tile</h3>
+                </mat-grid-tile-footer>
+        </mat-grid-tile>
+</mat-grid-list> -->
+
+<mat-form-field (ngSubmit)='performSearch($event)' style="border: white;">
+    <mat-label style="color:white;">Geners</mat-label>
+    <mat-select [formControl]="toppings" multiple [(ngModel)]="cate">
+      <mat-option *ngFor="let topping of toppingList" [value]="topping" name='searchBar' (keyup.enter)='performSearch(topping)'>{{topping}}</mat-option>
+    </mat-select> 
+</mat-form-field>
+<button mat-raised-button color="primary" (click)='performSearch(cate)' id='submit-search' type='submit' for='searchBar'>Filter</button>
+<button mat-raised-button color="primary" (click)='ngOnInit()' id='submit-search' type='submit' for='searchBar'>clear</button>
+
+<div *ngIf="!showspinner" style="margin-top: 200px;margin-left: 200px;">    
+    <mat-spinner></mat-spinner>
+</div>
+<!-- <div *ngIf="!movies && showspinner" style="margin-top: 200px;margin-left: 200px;">
+    <mat-spinner></mat-spinner>
+</div> -->
+
+<!-- <mat-grid-list cols="4" rowHeight="4:3">
+    <mat-grid-tile *ngFor="let movie of movies" class="green">
+        <img class="tile-image" src="{{movie.img}}" >
+            <mat-grid-tile-footer>
+            <button class="test" mat-icon-button color="warn" (click)="onplay(movie)"><mat-icon>play_arrow</mat-icon></button>
+            <button class="test1" mat-icon-button color="warn" (click)="oninfo(movie)"><mat-icon>info</mat-icon></button>
+            </mat-grid-tile-footer>
+    </mat-grid-tile>
+</mat-grid-list> -->
+
+<mat-grid-list [cols]="breakpoint" rowHeight="4:3" (window:resize)="onResize($event)">
+    <mat-grid-tile *ngFor="let movie of movies" class="green">
+        <img class="tile-image" src="{{movie.img}}" >
+            <mat-grid-tile-footer>
+            <button class="test" mat-icon-button color="warn" (click)="onplay(movie)"><mat-icon>play_arrow</mat-icon></button>
+            <button class="test1" mat-icon-button color="warn" (click)="oninfo(movie)"><mat-icon>info</mat-icon></button>
+            </mat-grid-tile-footer>
+    </mat-grid-tile>
+</mat-grid-list>
+      
+ 
+
+<!-- 
+<mat-grid-list cols="4" rowHeight="4:1">
+    <mat-grid-tile>1</mat-grid-tile>
+    <mat-grid-tile>2</mat-grid-tile>
+    <mat-grid-tile>3</mat-grid-tile>
+    <mat-grid-tile>4</mat-grid-tile>
+  </mat-grid-list>
+   -->

@@ -1,0 +1,62 @@
+<!-- <div class="container p-3">
+    <div class="offset-3 col-6">
+      <div class="card">
+        <div class="card-header  font-weight-bold">
+          Signup
+        </div>
+        <div class="card card-body" style="padding:30px;">
+            
+            <div class="row">
+                <div class="col-12">
+                    <div class="form-group">
+                        <input type="email" [(ngModel)]="email" class="form-control" placeholder="Email" required>
+                    </div>
+                 </div>
+        </div>
+        <div class="row">
+                 <div class="col-12">
+                    <div class="form-group">
+                        <input type="password" [(ngModel)]="password" class="form-control" placeholder="Password" required (keyup.enter)="login()">
+                        
+                    </div>
+                 </div>
+                          
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <button [disabled]="!(email&&password)" class="btn btn-primary" (click)="signup()">Signup</button>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <a (click)="resetpassword()" type="button" class="nav-link">Forgot Password</a>
+            </div>
+            
+        </div>
+        </div>
+      </div>
+    </div>
+  </div> -->
+
+
+
+  <mat-card>
+    <mat-card-content>
+       <h2>signup</h2>
+   
+ 
+       <mat-form-field class="full-width-input">
+         <input matInput placeholder="Email" type="email" [(ngModel)]="email" class="form-control" name="email"  required>
+         <mat-error>Please provide a valid email address</mat-error>
+       </mat-form-field>
+ 
+       <mat-form-field class="full-width-input">
+          <input  matInput type="password" placeholder="Password" [(ngModel)]="password"  class="form-control"required>
+          <mat-error>Please provide a valid password</mat-error>
+       </mat-form-field>
+ 
+       <button type="submit" class="btn btn-success" [disabled]="!(email&&password)||(check())" (click)="signup()">Signup</button>
+     </mat-card-content>
+   </mat-card>
+ 

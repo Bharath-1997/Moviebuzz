@@ -1,0 +1,76 @@
+<div class="container p-3">
+    <div class="offset-3 col-6">
+      <div class="card">
+        <div class="card-header  font-weight-bold">
+          Add New Movie
+        </div>
+        <form #form="ngForm" autocomplete="off" (submit)=onSubmit(form)>
+                <div class="card card-body" style="padding:30px;">
+                        
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">MovieName</label>
+                                    <input type="text" [(ngModel)]="name" name="name" class="form-control" placeholder="MovieName" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <!-- <div class="form-group"> -->
+                                            <!-- <label for="exampleFormControlSelect1">Select category</label>
+                                            <select class="form-control" [(ngModel)]="category" name="category">
+                                            <option>Action,Drama,Crime</option>
+                                            <option>Drama</option>
+                                            <option>Thriller</option>
+                                            <option>Crime</option>
+                                            <option>Animation</option>
+                                            </select> -->
+                                            <mat-form-field>
+                                                <mat-label>Toppings</mat-label>
+                                                <mat-select multiple [(ngModel)]="catarr" name="catarr">
+                                                  <mat-option *ngFor="let topping of toppingList" [value]="topping" name='searchBar'>{{topping}}</mat-option>
+                                                </mat-select> 
+                                            </mat-form-field>
+                                  <!-- </div> -->
+                            </div>
+                                    
+                         </div>
+                         <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Movie Summary</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="desc" name="desc" placeholder=" Summary"></textarea>
+                                 </div>
+                            </div>
+                                    
+                         </div>
+                         <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">img</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="img" name="img" placeholder=" image url"></textarea>
+                                 </div>
+                            </div>
+                                    
+                         </div>
+                         <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea1">Movie url</label>
+                                    <input type="text" [(ngModel)]="url" name="url" class="form-control" placeholder="URL" required>
+                                 </div>
+                            </div>
+                                    
+                         </div>
+                        <div class="row">
+                         <div class="form-group">
+                            <button type="submit" [disabled]="form.invalid" class="btn btn-lg btn-block btn-info">submit</button>
+                        </div>
+                    </div>
+                </div>
+        </form>
+
+        </div>
+      </div>
+    </div>

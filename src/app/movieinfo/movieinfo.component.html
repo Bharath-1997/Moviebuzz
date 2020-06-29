@@ -1,0 +1,73 @@
+<!-- 
+<div class="form-row">
+<mat-card class="example-card" id="example">
+    <mat-card-header style="margin-top: -35px; padding: 0px; height: 23px;">
+      
+      <mat-card-title style="margin-top: 0px;">{{recievedRow.name}}</mat-card-title>
+      
+    </mat-card-header>
+    
+    <img mat-card-image [src]="imgsrc" alt="Photo of a Shiba Inu" style="width: 320px;height: 250px;">
+    <mat-card-content>
+      <p style="width: 285px;">
+       
+        {{recievedRow.desc}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+   
+    <a href="location.href='https://en.wikipedia.org/wiki/{{recievedRow.name}}">URL</a>  
+    <button mat-button>Contact</button>
+    </mat-card-actions>
+  </mat-card>
+
+  <mat-card class="example-card1" id="mySlider" style="margin-left: 1rem;width: 100%;">
+    
+        <iframe [src]="url" height="100%" width="100%"></iframe>
+   
+  </mat-card>
+
+</div> -->
+
+
+
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center" fxLayoutGap="25px">
+  <mat-card *ngFor="let member of members" fxFlex="calc(50%-25px)" fxFlex.sm="calc(50%-25px)" >
+    <mat-card-header style="margin-top: -20px;">
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{recievedRow.name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="imgsrc" alt="Photo of {{member.title}}">
+    <mat-card-content>
+      <p>
+        {{recievedRow.desc}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+   
+      <a href="https://en.wikipedia.org/wiki/{{recievedRow.name}}" target="_blank">More Info</a>
+      </mat-card-actions>
+  </mat-card>
+
+  <!-- <mat-card *ngFor="let member of members" fxFlex="calc(50%-25px)" fxFlex.sm="calc(50%-25px)" >
+    <mat-card-header style="margin-top: -20px;">
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{recievedRow.name}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="imgsrc" alt="Photo of {{member.title}}">
+    <mat-card-content>
+      <p>
+        {{recievedRow.desc}}
+      </p>
+    </mat-card-content>
+  </mat-card> -->
+
+  <mat-card *ngFor="let member of members" fxFlex="calc(50%-25px)" fxFlex.sm="calc(50%-25px)" class="example">
+    <mat-card-content>
+      <iframe [src]="url" height="100%" width="100%"></iframe>   
+    </mat-card-content>
+      
+  </mat-card>
+
+</div>
+

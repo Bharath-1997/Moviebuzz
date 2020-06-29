@@ -1,0 +1,81 @@
+  .tile-image {
+    width:100%;
+    height: 100%;
+    margin-top: 15px;
+    margin-left: 10px;
+    
+  }
+  .bodybg-color {
+    
+      background-color: #101010;
+  }
+ 
+  .mat-grid-list{
+      margin: 12px;
+      margin-top: 20px;
+  }
+ .mat-grid-tile-footer{
+    margin-left: 20px;
+    
+ }
+  /* .mat-form-field-infix
+  {
+    background-color: white;
+    padding: 0px;
+    margin-top: 10px;
+    opacity: 0.6;
+  } */
+
+  .mat-select-arrow-wrapper
+  {
+    color: white;
+    background-color: white;
+  }
+  .mat-select-value
+  {
+    color: white;
+  }
+
+ /* .mat-grid-tile-footer:hover { background-color: red; } */
+
+ /* .test:hover
+  { background-color: red; }
+  
+ .test1:hover
+ { background-color:blue; } */
+mat-icon
+{
+    border-radius: 5px;
+}
+/* button
+{
+    color:gray;
+    opacity: 1;
+} */
+/* .container
+{
+    display:block;
+    width:100%;
+    height:70%;
+    background-color:#475;
+    overflow-y: scroll;
+} */
+.mat-grid-tile{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* mat-icon{
+    display: none;
+  }
+  
+  .mat-grid-tile:hover mat-icon{
+    display: block;
+  } */
+.mat-grid-tile-footer
+{
+    opacity: 0.1;
+}
+.mat-grid-tile-footer:hover
+{
+    opacity: 1;
+}
